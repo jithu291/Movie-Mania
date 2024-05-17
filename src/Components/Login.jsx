@@ -16,7 +16,7 @@ function Login() {
 
   const handleLoginClick = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/auth/login', {
+      const response = await axios.post('https://movie-mania-backend-1.onrender.com/auth/login', {
         username,
         password
       }, {

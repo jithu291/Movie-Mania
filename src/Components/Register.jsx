@@ -19,7 +19,7 @@ function Register() {
 
   const handleRegisterClick = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/auth/register', {
+      const response = await axios.post('https://movie-mania-backend-1.onrender.com/auth/register', {
         username,
         email,
         password

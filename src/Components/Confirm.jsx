@@ -17,7 +17,7 @@ const ConfirmationPage = () => {
         
         try {
             // Send booking data to backend
-            await axios.post('http://localhost:5000/bookings', {
+            await axios.post('https://movie-mania-backend-1.onrender.com/bookings', {
                 movieName,
                 theaterName,
                 time,
