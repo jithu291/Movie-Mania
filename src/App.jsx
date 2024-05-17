@@ -10,6 +10,7 @@ import TicketBooking from './Components/Booking2'
 import Payment from './Components/Payment'
 import ConfirmationPage from './Components/Confirm'
 import List from './Components/List'
+import Footer from './Components/Footer'
 
 function App() {
 
@@ -26,6 +27,8 @@ function App() {
       <Route path='/payment' element={<Payment/>} />
       <Route path='/confirm' element={<ConfirmationPage/>} />
       <Route path='/list' element={<List/>} />
+      <Route path='/footer' element={<Footer/>} />
+
 
     </Routes>
     

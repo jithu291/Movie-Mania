@@ -2,6 +2,10 @@ import React from 'react'
 import { useLocation } from 'react-router-dom';
 import { FcFilmReel } from "react-icons/fc";
 import { Button } from '@mui/material';
+import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 
 
 function Booking() {
@@ -17,8 +21,8 @@ function Booking() {
 
 
   return (
-    <div>
-      <div>
+    <div style={{backgroundColor:'', height:'150vh'}}>
+      <div  >
         <nav class="navbar bg-body-tertiary">
           <div class="d-flex justify-content-evenly">
             <a class="text1 navbar-brand" href="#">
@@ -41,10 +45,17 @@ function Booking() {
           </div>
         </nav>
       </div>
-      <div className='ms-5 mt-5'>
-        <h1>{movieName}</h1>
+     
+      <div className='d-flex justify-content-evenly' style={{marginLeft:'80px', marginTop:'50px'}}>
+      <h1  style={{color:'#eb3656', }}>{movieName}</h1>
+        <LocalizationProvider dateAdapter={AdapterDayjs}>
+      <DemoContainer components={['DateTimePicker']}>
+        <DateTimePicker label="Select the date" showTimeInput={false}  className="customDateTimePicker  mb-3"/>
+      </DemoContainer>
+    </LocalizationProvider>
       </div>
-      <div className='border mt-3 rounded shadow' style={{ width: '90%', height: '100vh', marginLeft: '65px', backgroundColor: '#f2f2f2' }}>
+      <div className='border  rounded shadow' style={{ width: '90%', height: '110vh', marginLeft: '65px', backgroundColor: '#f2f2f2'}}>
+      
         <div className='d-flex justify-content-evenly mt-5 border' style={{width:'100%', height:'100px'}}>
           <p style={{ fontWeight: 'bold', marginLeft: '20px', fontSize:'15px' }}><FcFilmReel style={{fontSize:'30px'}} />
                Central Talkies 2K 3D Dolby Atmos: <br /> <span className='ms-5'>Thrippunithura</span></p>

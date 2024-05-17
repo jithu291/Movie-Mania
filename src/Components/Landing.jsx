@@ -137,7 +137,7 @@ function Landing() {
   return (
     <>
       <div>
-        <div>
+        <div >
           <nav class="navbar bg-body-tertiary">
             <div class="d-flex justify-content-evenly">
               <a class="text1 navbar-brand" href="#">
